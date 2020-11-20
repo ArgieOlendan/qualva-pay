@@ -1,0 +1,153 @@
+<div class="row progess-text">
+    <div class="col-4">
+        <h6 class="text-muted">ORDER</h6>
+    </div>
+    <div class="col-4">
+        <h6 class="text-muted">SHIPPING INFORMATION</h6>
+    </div>
+    <div class="col-4">
+        <h6 class="text-muted">CHECKOUT</h6>
+    </div>
+</div>
+<div class="progress round_corner">
+    <div class="progress-bar progress-bar-striped progress-bar-animated round_corner" role="progressbar" style="width: 33.33%;"
+        aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success round_corner" role="progressbar"
+        style="width: 33.33%;" aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<hr>
+<div>
+    <img src="/img/card_logo.png" alt="card_logo" width="200" style="border-radius: 5px;">
+</div>
+<hr>
+<div class="row">
+    <div class="col-10 offset-1 center">
+        <div class="content">
+            <h4 class="text-muted">ORDER SUMMARY</h4>
+            <div class="row">
+                <div class="col-6">
+                    <img src="/img/product_logo.png" alt="product_image" width="100" height="200" class="round_corner">
+                </div>
+                <div class="col-6">
+                    <p>{{ item.name }}</p>
+                    <p> Qty: {{ item.qty }}</p>
+                    <p>{{ item.company_name }} <img src="/img/verified_logo.png" alt="verified_logo" width="10"
+                            height="10"></p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <p>Subtotal</p>
+                </div>
+                <div class="col-6">
+                    <p class="text-muted">
+                        CA ${{ item.price }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p>Tax</p>
+                </div>
+                <div class="col-6">
+                    <p class="text-muted">
+                        CA ${{ item.tax }}
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        <b>Total</b>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p class="text-muted">
+                        CA ${{ total_price }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-10 offset-1 center">
+        <div class="content">
+            <form action="">
+                <h4 class="text-muted">YOUR DETAILS</h4>
+                <div class="form-group">
+                    <label class="col-form-label" for="email">Email Address</label>
+                    <input class="form-control round_corner" type="email" placeholder="example@qpay.com" id="email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <h4 class="text-muted">SHIPPING INFORMATION</h4>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="col-form-label" for="first-name">First Name</label>
+                            <input class="form-control round_corner" type="text" placeholder="First Name"
+                                id="first-name">
+                        </div>
+                        <div class="col-6">
+                            <label class="col-form-label" for="last-name">Last Name</label>
+                            <input class="form-control round_corner" type="text" placeholder="Last Name"
+                                id="last-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="address-line-1">Address Line 1</label>
+                    <input class="form-control round_corner" type="text" placeholder="Address Line 1"
+                        id="address-line-1">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="address-line-2">Address Line 2</label>
+                    <input class="form-control round_corner" type="text" placeholder="Address Line 2"
+                        id="address-line-2">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="col-form-label" for="state">Province/State</label>
+                            <select class="form-control round_corner" id="state">
+                                <option>select one</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="col-form-label" for="zip">Postal Code</label>
+                            <input class="form-control round_corner" type="text" placeholder="Postal Code" id="zip">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="country">Country</label>
+                    <select class="form-control round_corner" id="country">
+                        <option>select one</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="state">Phone Number</label>
+                    <input class="form-control round_corner" type="text" placeholder="00000000" id="phone-number">
+                </div>
+                <div class="button-holder row">
+                    <div class="col-8 offset-2">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block round_corner" id="submit_btn">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

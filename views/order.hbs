@@ -1,0 +1,60 @@
+<div class="row progess-text">
+    <div class="col-4">
+        <h6 class="text-muted">ORDER</h6>
+    </div>
+    <div class="col-4">
+        <h6 class="text-muted">SHIPPING INFORMATION</h6>
+    </div>
+    <div class="col-4">
+        <h6 class="text-muted">CHECKOUT</h6>
+    </div>
+</div>
+<div class="row progress round_corner">
+    <div class="progress-bar progress-bar-striped progress-bar-animated round_corner" role="progressbar"
+        style="width: 33.33%;" aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<hr>
+<div>
+    <img src="/img/card_logo.png" alt="card_logo" width="200" style="border-radius: 5px;">
+</div>
+<hr>
+<div class="row">
+    <div class="col-10 offset-1 center">
+        <div class="row">
+            <div class="col-12">
+                product image
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2><b>{{ item.name }}</b></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>{{ item.company_name }} <img src="/img/verified_logo.png" alt="verified_logo" width="10"
+                            height="10"></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <h3>
+                    <span class="text-muted">
+                        <b>${{ item.price }} CAD</b>
+                    </span>
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                Product Details
+            </div>
+        </div>
+    </div>
+</div>
