@@ -4,7 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build:css": "tailwindcss build public/css/main.css -o public/css/tailwind.css",
     "start": "node app.js",
     "dev": "cross-env NODE_ENV=development nodemon app.js"
   },

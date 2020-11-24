@@ -1,14 +1,112 @@
-<main>
-
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        
-      <!-- Replace with your content -->
-      <div class="px-4 py-6 sm:px-0">
-        <div class="border-4 bg-gray-200 rounded-2xl h-auto shadow-lg">
-        </div>
-      </div>
-      <!-- /End replace -->
-
+<div class="row progess-text">
+    <div class="col-4">
+        <h6 class="text-muted">ORDER</h6>
     </div>
+    <div class="col-4">
+        <h6 class="text-muted">SHIPPING</h6>
+    </div>
+    <div class="col-4">
+        <h6 class="text-muted">CHECKOUT</h6>
+    </div>
+</div>
 
-</main>
+<div class="progress round_corner">
+    <div class="progress-bar progress-bar-striped progress-bar-animated round_corner" role="progressbar"
+        style="width: 33.33%;" aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <img src="/img/product_logo.png" alt="product_logo.png" class="product-img">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 product-desc-section">
+        <p>
+            {{ item.name }}
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 product-company-name">
+        <p class="small">
+            {{ item.company_name }} <img src="/img/verified_logo.png" alt="verified_logo.png" class="verified-logo">
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-12 product-price-section">
+        $ {{ item.price }}
+    </div>
+</div>
+
+<form method="POST">
+<div class="row">
+    <div class="col-12">
+        <div class="form-group input-group">
+            <button type="button" class="btn btn-light minus">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-dash" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                </svg>
+            </button>
+            <input class="form-control form-control-lg" type="number" id="quantity" value="{{ item.qty }}">
+            <button type="button" class="btn btn-light plus">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="product-details-section well">
+            <p>Product Details</p>
+            {{#if item.description}}
+            <ul>
+                {{#each item.description}}
+                <li>{{ item.description }}</li>
+                {{/each}}
+            </ul>
+            {{/if }}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-12">
+        <div class="total">
+            <p>TOTAL $7.00 CAD</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="submit-button">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Primary</button>
+        </div>
+    </div>
+</div>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        <div class="checkout-message">
+            <p>
+                Secure checkout powered by qualva pay
+            </p>
+        </div>
+    </div>
+</div>

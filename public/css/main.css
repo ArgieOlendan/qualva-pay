@@ -1,0 +1,73 @@
+.progess-text {
+  margin-top: 20px;
+}
+
+.product-img {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.product-desc-section {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.product-company-name {
+  text-align: center;
+}
+
+.verified-logo {
+  width: 10px;
+}
+
+.product-price-section {
+  color: #b0b0b0;
+  font-weight: 500;
+  font-size: x-large;
+  text-align: center;
+}
+
+.input-group {
+    width: 40%;
+    margin: 20px auto;
+}
+
+#quantity {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    background-color: #E1E1E1;
+}
+
+button.minus {
+    border-radius: 10px 0 0 10px;
+}
+
+button.plus {
+    border-radius: 0 10px 10px 0;
+}
+
+.total {
+  color: #707070;
+  text-align: center;
+}
+
+.submit-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.checkout-message {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.progess-text {
+  text-align: center;
+}
