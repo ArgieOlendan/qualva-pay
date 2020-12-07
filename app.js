@@ -3,11 +3,13 @@ var mongoose = require('mongoose');
 var body_parser = require('body-parser');
 var exphbs = require('express-handlebars');
 var morgan = require('morgan');
+var cors = require('cors');
 
 var app = express();
 
 // Bodyparser Middleware
 app.use(body_parser.json());
+app.use(cors());
 
 // Morgan Middleware
 if (process.env.NODE_ENV === 'development') {
@@ -39,8 +41,6 @@ mongoose
 app.use(express.static(`${__dirname}/public`));
 
 // Use Routes
-app.use('/order', require('./routes/order'));
-app.use('/shipping', require('./routes/shipping'));
 app.use('/api/items', require('./routes/api/items'));
 
 var port = process.env.PORT || 5000;
